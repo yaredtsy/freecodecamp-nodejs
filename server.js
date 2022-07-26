@@ -22,7 +22,8 @@ if (!process.env.DISABLE_XORIGIN) {
 }
 
 app.use(function(req, res){
-  res.send('Hello Express')
+  const path = __dirname + 'views/index.html'
+  res.sendFile(path)
 })
 
 var port = process.env.PORT || 3000;
