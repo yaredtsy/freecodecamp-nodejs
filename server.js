@@ -22,7 +22,7 @@ if (!process.env.DISABLE_XORIGIN) {
 }
 
 app.use(function(req, res){
-  const path = __dirname + 'views/index.html'
+  const path = __dirname + '/views/index.html'
   res.sendFile(path)
 })
 
