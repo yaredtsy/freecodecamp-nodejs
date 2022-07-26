@@ -7,9 +7,9 @@ var bGround = require('fcc-express-bground');
 var myApp = require('./myApp');
 var express = require('express');
 
-express.static(__dirname+'/public')
-var app = express();
 
+var app = express();
+app.use(express.static(__dirname+'/public'))
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
     var allowedOrigins = ['https://narrow-plane.gomix.me', 'https://www.freecodecamp.com'];
